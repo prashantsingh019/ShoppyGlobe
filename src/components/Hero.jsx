@@ -3,8 +3,11 @@ import { heroUrls } from "../utils/hero-images";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faLessThan, faGreaterThan } from "@fortawesome/free-solid-svg-icons";
 
+
 function Hero() {
   const [prevCount, setCount] = useState(0);
+ 
+  
   const handleIncrement = () => {
     if (heroUrls.length - 1 <= prevCount) {
       setCount(0);
@@ -15,7 +18,8 @@ function Hero() {
 
   return (
     <div className="hero-image flex flex-col">
-      <div className="float-buttons w-screen flex justify-between p-3 absolute top-52">
+
+      <div className="float-buttons flex justify-between items-center w-[99.5%] absolute h-[40vh] p-2">
         <button
           className="bg-gray-300 p-4 text-2xl py-5 rounded-xl"
           onClick={() => {
@@ -26,8 +30,9 @@ function Hero() {
         >
           <FontAwesomeIcon icon={faLessThan} />
         </button>
+       
         <button
-          className="bg-gray-300 p-4 text-2xl py-5"
+          className="bg-gray-300 p-4 text-2xl py-5 rounded-xl"
           onClick={handleIncrement}
         >
           <FontAwesomeIcon icon={faGreaterThan} />
