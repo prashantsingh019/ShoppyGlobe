@@ -6,7 +6,7 @@ import { giveData } from "./redux/data";
 import { useDispatch } from "react-redux";
 import { useEffect } from "react";
 import { Outlet } from "react-router";
-import Cart from "./components/Cart";
+// import Cart from "./components/Cart";
 import ProductDetails from "./components/ProductDetails";
 import './responsive.css'
 
