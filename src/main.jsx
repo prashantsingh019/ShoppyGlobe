@@ -9,7 +9,7 @@ import Cart from "./components/Cart.jsx";
 import NotFound from "./components/NotFound.jsx";
 import ProductList from "./components/ProductList.jsx";
 import Body from "./components/Body.jsx";
-
+import ProductDetails from "./components/ProductDetails.jsx";
 const routes = createBrowserRouter([
   {
     path: "/",
@@ -25,10 +25,13 @@ const routes = createBrowserRouter([
         element: <Cart />,
       },
       {
-        path:"/shop",
+        path:"/products",
         element:<ProductList/>
       },
-      
+      {
+        path:"/product/:id",
+        element:<ProductDetails />
+      }
     ],
     errorElement:<NotFound/>
   },

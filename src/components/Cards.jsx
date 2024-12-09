@@ -2,15 +2,18 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faStar, faDollarSign } from "@fortawesome/free-solid-svg-icons";
 import { addToCart } from "../redux/cart";
 import { useDispatch } from "react-redux";
+import { Link } from "react-router";
+import '../responsive.css'
 function Cards({ data }) {
   const dispatch = useDispatch();
-
+ 
   
   function handleAddToCart(item) {
     dispatch(addToCart(item));
   }
   return (
     <div className="product-card">
+      
       <div className="img-container w-[100%] h-[50%] rounded-lg">
         <img src={data.thumbnail} alt="" className="card-img" />
       </div>
@@ -27,10 +30,12 @@ function Cards({ data }) {
 
         <h3 className="text-xl flex items-center justify-between">
           <span>
-          <FontAwesomeIcon icon={faDollarSign} /> {data.price}</span>
-         <span className="text-sm">({data.stock})</span> 
+            <FontAwesomeIcon icon={faDollarSign} /> {data.price}
+          </span>
+          <span className="text-sm">({data.stock})</span>
         </h3>
       </div>
+
       <div className="buttons">
         <button
           className="btn-md bg-yellow-500 text-white"
@@ -39,7 +44,7 @@ function Cards({ data }) {
           Add To Cart
         </button>
         <button className="btn-md btn-success bg-green-700 text-white">
-          Order now
+        <Link to={`/product/${data.id}`}>view details</Link>
         </button>
       </div>
     </div>

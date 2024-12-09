@@ -4,11 +4,11 @@ import useFetchProducts from "./hooks/useFetchProducts";
 import "./App.css";
 import { giveData } from "./redux/data";
 import { useDispatch } from "react-redux";
-import LongCard from "./components/LongCard";
 import { useEffect } from "react";
 import { Outlet } from "react-router";
 import Cart from "./components/Cart";
-
+import ProductDetails from "./components/ProductDetails";
+import './responsive.css'
 
 function App() {
   const dispatch = useDispatch();
@@ -16,6 +16,7 @@ function App() {
     "https://dummyjson.com/products"
   );
   useEffect(() => {
+  
     if (products) {
       dispatch(giveData(products));
     }
@@ -25,7 +26,7 @@ function App() {
   return (
     <div className="border-box relative">
       {loading && <span className="loader"></span>}
-
+      
       <Header />
       
       <Outlet />

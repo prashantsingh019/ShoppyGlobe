@@ -20,10 +20,11 @@ nav li,
   align-items: center;
 }
 .middle-nav ul li hr {
-  background-color: rgb(255, 255, 255);
-  height: 3px;
+  background-color: rgb(234 179 8);
+  height: 2px;
   border-radius: 5px;
-  width: 80%;
+  width: 100%;
+  box-shadow: 0px 0px 2px;
 }
 nav {
   font-family: "Poppins", serif;
@@ -218,3 +219,92 @@ nav {
   width: 30px;
   text-align: center;
 }
+
+.product-container {
+  /* background-color: #ff3d00; */
+  box-shadow: 0px 0px 10px gray;
+  border-radius: 0.5em;
+  margin: 5px;
+}
+
+.action-btns button:nth-child(1) {
+  background-color: rgb(0, 0, 0);
+  color: white;
+}
+
+.action-btns button {
+  padding: 0.3em 5em;
+  border-radius: 0.3em;
+  font-weight: 300;
+  transition: all 0.3ms ease;
+}
+
+.action-btns button:nth-child(2) {
+  border: 1px solid gray;
+}
+
+.action-btns button:nth-child(1):hover {
+  background-color: rgb(75, 72, 72);
+}
+
+.action-btns button:nth-child(2):hover {
+  background-color: rgb(184, 169, 0);
+  color: white;
+}
+
+.action-btns button:nth-child(2):active {
+  background-color: rgb(26, 152, 9);
+}
+
+.action-btns {
+  /* background-color: #00ff2f; */
+  gap: 0.5em;
+}
+
+.product-details-img {
+  /* background-color: aqua; */
+  width: 100%;
+  height: 100%;
+  object-fit: scale-down;
+}
+
+.side-card {
+  box-shadow: 0px 0px 10px gray;
+  border-radius: 0.8em;
+  padding: 2em;
+  height: 200px;
+  color: gray;
+}
+
+.item-total {
+  color: black;
+}
+
+#search-bar {
+  outline: none;
+}
+.tag{
+  background-color: gray;
+  border-radius: .5em;
+  padding: .2em;
+}
+
+#tags{
+  gap: 5px;
+  padding: 2px;
+}
+
+@media screen and (max-width: 842px) {
+   .middle-nav{
+    background-color: blueviolet;
+    width: 250px;
+    font-size: 0.7em;
+   }
+   nav{
+    background-color: chartreuse;
+    justify-content: space-between;
+    padding: 0em;
+   }
+  }
+
+  

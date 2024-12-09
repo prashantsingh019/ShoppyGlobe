@@ -1,0 +1,65 @@
+@media screen and (max-width: 766px){
+    .logo{
+       font-size: .8em;
+    }
+  }
+
+  @media screen and (max-width: 640px){
+    .icon{
+       font-size: 1em;
+    }
+  }
+
+  @media screen and (max-width: 605px){
+    .middle-nav{
+      display: none;
+      background-color: #ff3d00;
+    }
+    .middle-nav ul{
+      flex-direction: column;
+      position: absolute;
+      top: 100px;
+    }
+    .logo .icon{
+      display: none;
+    }
+    
+  }
+
+  @media screen and (max-width: 484px){
+    .right-nav{
+      width: 50%;
+    }
+  }
+
+  @media screen and (max-width: 297px){
+    .right-nav{
+      width: 50%;
+      position: relative;
+    }
+    .userIcon,.likeIcon{
+      display: none;
+    }
+  }
+
+  @media screen and (max-width: 375px){
+    .img{
+        height: 24vh;
+        /* background-color: blue; */
+    }
+    .float-buttons button{
+        background-color: transparent;
+        font-size: x-small;
+        margin-top: 40px;
+    }
+    .float-buttons{
+        /* background-color: aqua; */
+        align-items: start;
+        
+    }
+    .product-card{
+        width: 150px;
+        height: 140px;
+       
+    }
+  }
